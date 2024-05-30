@@ -57,16 +57,16 @@ function checkexistingbackupfilenameandcreatenew() {
 
 function databasedump() {
 
-    if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-        echo "All input parameters must have a value"
-        exit 1
-    fi
+#    if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
+#        echo "All input parameters must have a value"
+#       exit 1
+#   fi
 
     backup_dir="/opt/bkp-$(date +%y%m%d)"
-    db_user_name=$1
+    #db_user_name=$1
     #db_password=$2
-    db_host=$2
-    db_port=$3
+    #db_host=$2
+    #db_port=$3
 
     checkexistingbackupfolderandcreatenew
 
@@ -74,7 +74,9 @@ function databasedump() {
 
         for DATABASE_NAME in $(mongosh --quiet --eval "show dbs" | awk {'print $1'}); do
 
-            mongodump --username "" --password "" --host ${db_host} --db ${DATABASE_NAME} --port ${db_port} --out ${backup_dir}
+            mongodump   --db ${DATABASE_NAME}  --out ${backup_dir}
+            
+#            mongodump --username ${db_user_name} --password ${db_password} --host ${db_host} --db ${DATABASE_NAME} --port ${db_port} --out ${backup_dir}
 
             if [ $? -eq 0 ]; then
                 echo "database ${DATABASE_NAME}  dump for  was completed successfully."
@@ -101,8 +103,12 @@ function databasedump() {
 
 }
 
-databasedump $1 $2 $3
 
-#####################################################################
-# you can run script with below commands as per your credentials
-# ./mongodbfullbackup.sh root  localhost 27017
+
+function main() {
+
+databasedump
+
+}
+
+main
