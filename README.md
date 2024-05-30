@@ -1,4 +1,4 @@
-# MongoDB Full Backup Script (with Credentials)
+# MongoDB Full Backup Script
 
 This script automates the creation of a full backup for a MongoDB replica set, leveraging the mongodump and mongorestore tools. It's compatible with MongoDB versions 6.0 and later.
 
@@ -19,7 +19,7 @@ chmod +x mongodbfullbackupwithdbcredentials.sh
 Execute the script, providing your MongoDB credentials (username, password, host, and port) as arguments:
 
 Bash
-./mongodbfullbackupwithdbcredentials.sh <USERNAME> <PASSWORD> <HOST> <PORT>
+./mongodbfullbackupwithdbcredentials.sh DBUSERNAME DBPASSWORD DBHOST DBPORT
 
 Example:
 Bash
@@ -50,7 +50,7 @@ Feel free to reach out for further assistance.
 
 ## Customization:
 
-Replace <USERNAME>, <PASSWORD>, <HOST>, and <PORT> with your actual MongoDB credentials.
+Replace (dbusername, dbpassword, dbhost, and dbport)  with your actual MongoDB credentials.
 Modify backup and storage directory paths within the script itself.
 Additional Notes:
 
