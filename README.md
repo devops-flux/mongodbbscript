@@ -5,9 +5,11 @@ This script automates the creation of a full backup for a MongoDB replica set, l
 ## Prerequisites:
 
 MongoDB Replica Set: Ensure you have a running replica set with version 6.0 or above.
-Tools: Make sure mongodump, mongoshell, mongorestore, and bash (tested with 5.0.17) are installed.
-Compression: On Ubuntu 20.04, if you lack p7zip-full, install it using sudo apt install p7zip-full.
+Tools: Make sure mongodump, mongoshell, mongorestore, and bash (tested with 5.0.17) p7zip-full are installed.
+
+if p7zip-full is not installed  , install it using sudo apt install p7zip-full.
 Usage:
+compression creating .7z file 
 
 ## Download and Permissions:
 Download the script (mongodbfullbackupwithdbcredentials.sh) to your local machine. In your terminal, navigate to the script's directory. Make the script executable:
