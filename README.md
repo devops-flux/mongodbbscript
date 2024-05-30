@@ -30,8 +30,6 @@ Bash
 Utilizes mongodump to dump data from the replica set.
 Creates a compressed archive (.7z format) of the dumped data using p7zip.
 
-## Error Handling:
-If you encounter issues, provide the error messages and logs for troubleshooting.or you can reach at me anandrai@devopsflux.com
 
 ## Testing:
 
@@ -39,14 +37,15 @@ This script has been rigorously tested with:
 
 MongoDB version: 6.0.0
 Bash version: 5.0.17
-Test results confirm:
 
+Test results confirm:
 Successful backup creation.
 Flawless restoration of backup data.
 Proper functioning of the MongoDB replica set after backup and restore.
-Support:
 
-Feel free to reach out for further assistance.
+## Support:
+Feel free to reach out for further assistance. If you encounter issues, provide the error messages and logs for troubleshooting.
+you can reach at me anandrai@devopsflux.com
 
 ## Customization:
 
