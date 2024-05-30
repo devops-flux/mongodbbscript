@@ -120,7 +120,7 @@ databasedump
 main
 
 #####################################################################
-# if you want to  run script with username password port host then follow  below commands and modify based on your usernam password host and port
+# if you want to  run script with username password port host then follow  below commands and modify based on your username password host and port
 # ./mongodbfullbackup.sh <username> <password> <host> <port>
 # for example  below commands 
 # ./mongodbfullbackup.sh root  samplepassword localhost 27017
