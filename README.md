@@ -55,4 +55,5 @@ Replace (dbusername, dbpassword, dbhost, and dbport)  with your actual MongoDB c
 Modify backup and storage directory paths within the script itself.
 
 Security: This script directly includes credentials in the command line. For enhanced security, consider environment variables or a configuration file for storing credentials.
+
 Retention: Implement a strategy for retaining and rotating backups to manage storage usage.
